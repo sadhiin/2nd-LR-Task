@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Model API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Expecting the inputs for the predictions</h1>
+
+        <!-- Main Input For Receiving Query to model -->
+        <form action="{{ url_for('predicetion')}}" method="post">
+            <input type="text" name="process_temp" placeholder="Process temperature [K]" required="required" />
+            <input type="text" name="hdf" placeholder="HDF" required="required" />
+            <input type="text" name="twf" placeholder="TWF" required="required" />
+            <input type="text" name="pwf" placeholder="PWF" required="required" />
+            <input type="text" name="osf" placeholder="OSF" required="required" />
+            <input type="text" name="rnf" placeholder="RNF" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <!-- Process_temp HDF TWF PWF OSF RNF -->
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+</body>
+
+</html>
