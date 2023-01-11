@@ -21,8 +21,10 @@ This project has `3` major segments:
     - Statsmodels
 
     Execute all the the notebook cells for the traing and saving the trained model. In model section I try represent Linear Rigression model in different view of output. Presnet model in the notebook are `2 variasion of Linear Rigression model`, `Standadize data`, `Regularized Model: LASSO, Ridge, ElasticNet`.
+    
 2. After executing all cells this notebook save the trained model of all variations. Then run the app.py using the below command to start the Flask API.
     `python app.py`
+    
 3. By default, flask will run on port 5000.
     Navigate to URL `http://localhost:5000` or `http://127.0.0.1:5000/`
 
